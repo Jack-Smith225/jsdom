@@ -13,5 +13,4 @@ function positionMessage() {
   moveElement("message", 200, 100, 10);
 }
 
-// 此处不能写成 "positionMessage()", 否则加载不出效果
-addLoadEvent(positionMessage)
+
