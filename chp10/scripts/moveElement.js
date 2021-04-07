@@ -24,7 +24,7 @@ function moveElement(elemId, final_x, final_y, interval) {
     ypos--;
   }
   elem.style.left = xpos + "px";
-  elem.style.right = ypos + "px";
+  elem.style.top = ypos + "px";
   var repeat = "moveElement('" + elemId + "'," + final_x + "," + final_y + "," + interval + ")";
   let movement = setTimeout(repeat, interval);
 
