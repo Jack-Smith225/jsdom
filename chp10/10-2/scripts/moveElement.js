@@ -6,6 +6,9 @@ function moveElement(elemId, final_x, final_y, interval) {
     return false;
   }
   var elem = document.getElementById(elemId);
+  if (elem.movement) {
+    clearTimeout(elem.movement)
+  }
   var xpos = parseInt(elem.style.left);
   var ypos = parseInt(elem.style.top);
   if (xpos === final_x && ypos === final_y) {
@@ -26,6 +29,6 @@ function moveElement(elemId, final_x, final_y, interval) {
   elem.style.left = xpos + "px";
   elem.style.top = ypos + "px";
   var repeat = "moveElement('" + elemId + "'," + final_x + "," + final_y + "," + interval + ")";
-  let movement = setTimeout(repeat, interval);
+  elem.movement = setTimeout(repeat, interval);
 
 }
