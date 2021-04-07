@@ -1,0 +1,6 @@
+#slideshow {
+    width: 100px;
+    height: 100px;
+    position: relative; /*这个属性很重要, 加上之后, 子元素的(0,0)坐标将固定在 slideshow div的座左上角*/
+    overflow: hidden; /*设置子元素溢出的部分进行隐藏*/
+}
