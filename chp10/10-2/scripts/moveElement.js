@@ -9,6 +9,14 @@ function moveElement(elemId, final_x, final_y, interval) {
   if (elem.movement) {
     clearTimeout(elem.movement)
   }
+  //tag::安全性检查
+  if (!elem.style.left) {
+    elem.style.left = "0px";
+  }
+  if (!elem.style.top) {
+    elem.style.top = "0px";
+  }
+  //end::安全性检查
   var xpos = parseInt(elem.style.left);
   var ypos = parseInt(elem.style.top);
   if (xpos === final_x && ypos === final_y) {
