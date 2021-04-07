@@ -15,16 +15,16 @@ function moveElement(elemId, final_x, final_y, interval) {
     return true;
   }
   if (xpos<final_x) {
-    xpos++;
+    xpos+=Math.ceil((final_x-xpos)/10);
   }
   if (xpos > final_x) {
-    xpos--;
+    xpos-=Math.ceil((xpos-final_x)/10);
   }
   if (ypos < final_y) {
-    ypos++;
+    ypos+=Math.ceil((final_y-ypos)/10);
   }
   if (ypos > final_y) {
-    ypos--;
+    ypos-=Math.ceil((ypos-final_y)/10);
   }
   elem.style.left = xpos + "px";
   elem.style.top = ypos + "px";
