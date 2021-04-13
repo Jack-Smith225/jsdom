@@ -1,0 +1,19 @@
+/*tag::为h5块元素定义默认的样式*/
+section, header, article, nav {
+    display: block;
+}
+/*end::为h5块元素定义默认的样式*/
+
+/*把所有元素的内外边距都设为0*/
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 1em 10%; /*上下各1em(默认16px), 左右各占窗口的10%*/
+    background-image: url("../images/background.gif"); /*默认是repeat*/
+    background-attachment: fixed; /*设置背景图片是否随之滚动*/
+    background-position: top left;
+    background-repeat: repeat-x;
+}
